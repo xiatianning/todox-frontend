@@ -23,8 +23,8 @@ const TodoItem = ({ todo, onUpdate }) => {
     const handleNameChange = (e) => {
         // Not accepting empty input
         // A possbile area of improvement to show an error message
-        const value = e.target.value.trim();
-        if (value !== "") {
+        const value = e.target.value;
+        if (value.trim() !== "") {
             setNewName(value);
         }
     };
