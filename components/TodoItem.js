@@ -21,7 +21,12 @@ const TodoItem = ({ todo, onUpdate }) => {
 
     // Handle name change in input field
     const handleNameChange = (e) => {
-        setNewName(e.target.value);
+        // Not accepting empty input
+        // A possbile area of improvement to show an error message
+        const value = e.target.value.trim();
+        if (value !== "") {
+            setNewName(value);
+        }
     };
 
     return (
